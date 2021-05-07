@@ -16,55 +16,51 @@ import javax.persistence.Table;
  *
  * @author pedrohenrique
  */
-
 @Entity
-@Table(name="alunos")
-public class Aluno {
+@Table(name="professor")
+public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
-    private int id;
+    private Integer id;
     
     @Column(name="name")
-    private String name;
+    private int name;
     
-    @Column(name="registration_code")
-    private int registration_code;
+    @Column(name="email")
+    private int email;
     
-    @Column(name = "phone_number")
-    private String phone_number;
-    
-    
-    public int getId() {
+    @Column(name="password")
+    private int password;
+
+    public Integer getId() {
         return id;
     }
 
-    public String getName() {
+    public int getName() {
         return name;
     }
 
-    public int getRegistrion_code() {
-        return registration_code;
+    public int getEmail() {
+        return email;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public int getPassword() {
+        return password;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public void setName(String name) {
+    public void setName(int name) {
         this.name = name;
     }
 
-    public void setRegistrion_code(int registrion_code) {
-        this.registration_code = registrion_code;
+    public void setEmail(int email) {
+        this.email = email;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPassword(int password) {
+        this.password = password;
     }
-    
-    
 }
