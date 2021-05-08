@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.sisedu;
+
+import com.mycompany.sisedu.controller.TeacherController;
+import com.mycompany.sisedu.model.Teacher;
 
 /**
  *
@@ -11,6 +9,14 @@ package com.mycompany.sisedu;
  */
 public class Teste {
     public static void main (String[] args) {
-        System.out.println("teste");
+        Teacher teacher = new Teacher();
+        TeacherController teacherController = new TeacherController();
+        
+        teacher.setName("Ray this man");
+        teacher.setEmail("É o fraco");
+        teacher.setPassword("password");
+        
+        teacherController.save(teacher);
+        
     } 
 }
