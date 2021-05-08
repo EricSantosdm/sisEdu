@@ -15,11 +15,11 @@ import javax.persistence.Table;
  * @author pedrohenrique
  */
 @Entity
-@Table(name="turma")
+@Table(name="class")
 public class Class {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
-    private Integer registration;
+    private Integer registrationCode;
 
     @Column(name="shift")
     private String shift;
@@ -37,8 +37,8 @@ public class Class {
     @JoinColumn(name = "fk_school",nullable=false)
     private School school;
 
-    public Integer getRegistration() {
-        return registration;
+    public Integer getRegistrationCode() {
+        return registrationCode;
     }
 
     public String getShift() {
@@ -61,8 +61,8 @@ public class Class {
         return school;
     }
 
-    public void setRegistration(Integer registration) {
-        this.registration = registration;
+    public void setRsegistrationCode(Integer registrationCode) {
+        this.registrationCode = registrationCode;
     }
 
     public void setShift(String shift) {

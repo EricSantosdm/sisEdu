@@ -15,11 +15,11 @@ import javax.persistence.Table;
  * @author pedrohenrique
  */
 @Entity
-@Table(name="disciplina")
+@Table(name="subject")
 public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
-    private Integer registration;
+    private Integer registrationCode;
     
     @Column(name="workload")
     private int workload;
@@ -28,7 +28,7 @@ public class Subject {
     private int name;
     
     @Column(name="menu")
-    private int menu;
+    private String menu;
     
     @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "fk_class",nullable=false)
@@ -38,8 +38,8 @@ public class Subject {
     @JoinColumn(name = "fk_teacher",nullable=false)
     private Teacher teacher;
 
-    public Integer getRegistration() {
-        return registration;
+    public Integer getRegistrationCode() {
+        return registrationCode;
     }
 
     public int getWorkload() {
@@ -50,7 +50,7 @@ public class Subject {
         return name;
     }
 
-    public int getMenu() {
+    public String getMenu() {
         return menu;
     }
 
@@ -62,8 +62,8 @@ public class Subject {
         return teacher;
     }
 
-    public void setRegistration(Integer registration) {
-        this.registration = registration;
+    public void setRegistrationCode(Integer registrationCode) {
+        this.registrationCode = registrationCode;
     }
 
     public void setWorkload(int workload) {
@@ -74,7 +74,7 @@ public class Subject {
         this.name = name;
     }
 
-    public void setMenu(int menu) {
+    public void setMenu(String menu) {
         this.menu = menu;
     }
 

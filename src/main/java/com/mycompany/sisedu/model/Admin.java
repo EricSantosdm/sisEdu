@@ -15,7 +15,7 @@ import javax.persistence.Table;
  * @author pedrohenrique
  */
 @Entity
-@Table(name="administrador")
+@Table(name="administrator")
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )

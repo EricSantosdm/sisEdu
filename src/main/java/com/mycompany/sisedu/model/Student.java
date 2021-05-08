@@ -16,17 +16,14 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name="alunos")
+@Table(name="student")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
-    private int id;
+    private Integer registrationCode;
     
     @Column(name="name")
     private String name;
-    
-    @Column(name="registrationCode")
-    private int registrationCode;
     
     @Column(name = "email")
     private String email;
@@ -38,16 +35,12 @@ public class Student {
     @JoinColumn(name = "fk_school",nullable=false)
     private School school;
 
-    public int getId() {
-        return id;
+    public Integer getRegistrationCode() {
+        return registrationCode;
     }
 
     public String getName() {
         return name;
-    }
-
-    public int getRegistrationCode() {
-        return registrationCode;
     }
 
     public String getEmail() {
@@ -62,16 +55,12 @@ public class Student {
         return school;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setRegistrationCode(Integer registrationCode) {
+        this.registrationCode = registrationCode;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setRegistrationCode(int registrationCode) {
-        this.registrationCode = registrationCode;
     }
 
     public void setEmail(String email) {
@@ -85,5 +74,5 @@ public class Student {
     public void setSchool(School school) {
         this.school = school;
     }
-    
+  
 }
