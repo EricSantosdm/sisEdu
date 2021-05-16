@@ -5,4 +5,5 @@ module com.mycompany.sisedu {
     opens com.mycompany.sisedu to javafx.fxml;
     exports com.mycompany.sisedu;
     requires hibernate.jpa;
+    requires java.persistence;
 }

@@ -1,5 +1,7 @@
 package com.mycompany.sisedu;
 
+import com.mycompany.sisedu.controller.TeacherController;
+import com.mycompany.sisedu.model.Teacher;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,7 +34,16 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        Teacher teacher = new Teacher();
+//        TeacherController teacherController = new TeacherController();
+        
+        teacher.setName("Teste com o java fx");
+        teacher.setEmail("É o fraco");
+        teacher.setPassword("password");
+        
+//        teacherController.save(teacher);
+        System.out.println(teacher.getName());
+//        launch();
     }
 
 }
