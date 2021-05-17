@@ -22,13 +22,13 @@ public class Admin {
     private Integer id;
     
     @Column(name="name")
-    private int name;
+    private String name;
     
     @Column(name="email")
-    private int email;
+    private String email;
     
     @Column(name="password")
-    private int password;
+    private String password;
     
     @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "fk_school",nullable=false)
@@ -38,15 +38,15 @@ public class Admin {
         this.id = id;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -58,15 +58,15 @@ public class Admin {
         return id;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
