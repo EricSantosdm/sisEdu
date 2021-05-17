@@ -34,16 +34,17 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        launch();
+
         Teacher teacher = new Teacher();
-//        TeacherController teacherController = new TeacherController();
+        TeacherController teacherController = new TeacherController();
         
-        teacher.setName("Teste com o java fx");
-        teacher.setEmail("É o fraco");
-        teacher.setPassword("password");
+        teacher.setName("Teste com o java fx e hibernate funfou");
+        teacher.setEmail("Feliz estou");
+        teacher.setPassword("o cu de vcs é meu");
         
-//        teacherController.save(teacher);
+        teacherController.save(teacher);
         System.out.println(teacher.getName());
-//        launch();
     }
 
 }
