@@ -31,6 +31,54 @@ public class Adress {
     
     @Column(name="district")
     private String district;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public String getNumber() {
+        return number;
+    }
     
     @Column(name="street")
     private String street;

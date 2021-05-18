@@ -1,5 +1,6 @@
 /home/pedrohenrique/NetBeansProjects/SisEDU/src/main/java/com/mycompany/sisedu/App.java
 /home/pedrohenrique/NetBeansProjects/SisEDU/src/main/java/com/mycompany/sisedu/controller/StudentProvider.java
+/home/pedrohenrique/NetBeansProjects/SisEDU/src/main/java/com/mycompany/sisedu/model/Adress.java
 /home/pedrohenrique/NetBeansProjects/SisEDU/src/main/java/com/mycompany/sisedu/controller/login/LoginStudent.java
 /home/pedrohenrique/NetBeansProjects/SisEDU/src/main/java/com/mycompany/sisedu/controller/SubjectController.java
 /home/pedrohenrique/NetBeansProjects/SisEDU/src/main/java/com/mycompany/sisedu/model/Admin.java

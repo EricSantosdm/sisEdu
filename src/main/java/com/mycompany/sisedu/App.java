@@ -35,16 +35,16 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+//        launch();
 
         Teacher teacher = new Teacher();
-        TeacherController teacherController = new TeacherController();
+//        TeacherController teacherController = new TeacherController();
         
         teacher.setName("Helton tem down");
         teacher.setEmail("Helton tem down");
         teacher.setPassword("Helton tem down");
         
-        teacherController.save(teacher);
+//        teacherController.save(teacher);
         System.out.println(teacher.getName());
     }
 
