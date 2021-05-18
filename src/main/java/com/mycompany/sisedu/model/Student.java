@@ -32,8 +32,8 @@ public class Student {
     private String password;
     
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "fk_school",nullable=false)
-    private School school;
+    @JoinColumn(name = "fk_class",nullable=false)
+    private Class fk_class;
 
     public Integer getRegistrationCode() {
         return registrationCode;
@@ -51,8 +51,8 @@ public class Student {
         return password;
     }
 
-    public School getSchool() {
-        return school;
+    public Class getSchool() {
+        return fk_class;
     }
 
     public void setRegistrationCode(Integer registrationCode) {
@@ -71,8 +71,8 @@ public class Student {
         this.password = password;
     }
 
-    public void setSchool(School school) {
-        this.school = school;
+    public void setClass(Class fk_class) {
+        this.fk_class = fk_class;
     }
   
 }

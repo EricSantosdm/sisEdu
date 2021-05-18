@@ -1,10 +1,13 @@
 package com.mycompany.sisedu.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -21,8 +24,9 @@ public class School {
     @Column(name="cnpj")
     private String cnpj;
     
-    @Column(name="adress")
-    private String adress;
+    @OneToOne(cascade=CascadeType.ALL)
+    @JoinColumn(name = "fk_adress",nullable=false)
+    private Adress adress;
     
     @Column(name="phoneNumber")
     private String phoneNumber;
@@ -38,7 +42,7 @@ public class School {
         return cnpj;
     }
 
-    public String getAdress() {
+    public Adress getAdress() {
         return adress;
     }
 
@@ -58,7 +62,7 @@ public class School {
         this.cnpj = cnpj;
     }
 
-    public void setAdress(String adress) {
+    public void setAdress(Adress adress) {
         this.adress = adress;
     }
 

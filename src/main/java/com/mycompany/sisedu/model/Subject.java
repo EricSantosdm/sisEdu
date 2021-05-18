@@ -25,7 +25,7 @@ public class Subject {
     private int workload;
     
     @Column(name="name")
-    private int name;
+    private String name;
     
     @Column(name="menu")
     private String menu;
@@ -46,7 +46,7 @@ public class Subject {
         return workload;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
@@ -70,7 +70,7 @@ public class Subject {
         this.workload = workload;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
